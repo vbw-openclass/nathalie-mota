@@ -8,4 +8,47 @@ Description: Thème personnalisé pour le site de la photographe Nathalie Mota.
 Version: 1.0
 Tags: Nathalie Mota, Photographie, Évènement...
 Text Domain: nathalie-mota
-*//*# sourceMappingURL=style.css.map */
+*/
+/* Apparence du header*/
+.navheader {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navheader__logo {
+  margin-left: 120px;
+}
+.navheader ul {
+  list-style: none;
+  display: flex;
+  margin-left: 955px;
+}
+.navheader ul li {
+  margin-right: 50px;
+}
+.navheader ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.navfooter {
+  height: 40px;
+  border-top: solid black 1px;
+}
+.navfooter__menu {
+  display: flex;
+  justify-content: center;
+}
+.navfooter__menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.navfooter__menu li {
+  margin-right: 100px;
+}
+.navfooter__menu li a {
+  text-decoration: none;
+  color: black;
+}/*# sourceMappingURL=style.css.map */
