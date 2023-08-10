@@ -12,8 +12,11 @@
         
         wp_enqueue_style( 'style', get_stylesheet_uri() );
         wp_enqueue_script('script-js', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0', true);
+        add_theme_support( 'post-thumbnails' );
     }
 
-    add_action('wp_enqueue_scripts', 'theme_script');
+    add_action('wp_enqueue_scripts', 'theme_script', 'add_theme_support');
+    
+    
 
 ?>
