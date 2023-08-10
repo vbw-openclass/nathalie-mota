@@ -1,22 +1,26 @@
 //Header
 .navheader {
     height: 80px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
+
     &__logo {
         margin-left: 120px;
+        margin-right: auto;
     }
 
-    ul {
+    .menu-principal {
         list-style: none;
         display: flex;
-        margin-left: 955px;
+        margin-right: 120px;
+        margin-left: 0;
+        gap: 45px;
+
 
         li {
-            margin-right: 50px;
-
             a {
                 text-decoration: none;
                 color: black;
@@ -30,20 +34,18 @@
 
 .navfooter {
     height: 40px;
+    width: 100%;
     border-top: solid black 1px;
 
     &__menu {
         display: flex;
         justify-content: center;
 
-        ul {
+        .menu-footer {
             list-style: none;
             display: flex;
-            justify-content: center;
-        }
-
-        li {
-            margin-right: 100px;
+            gap: 70px;
+            margin-right: 70px;
 
             a {
                 text-decoration: none;

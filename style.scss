@@ -9,5 +9,11 @@ Tags: Nathalie Mota, Photographie, Évènement...
 Text Domain: nathalie-mota
 */
 
-/* Apparence du header*/
+/* Apparence du header & du footer */
 @import 'sass/menus.scss';
+
+/* Apparence de la modale de contact */
+@import 'sass/modale-contact.scss';
+
+/* Apparence de la mise en page */
+@import 'sass/layout.scss';
