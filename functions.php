@@ -15,7 +15,7 @@
         add_theme_support( 'post-thumbnails' );
     }
 
-    add_action('wp_enqueue_scripts', 'theme_script', 'add_theme_support');
+    add_action('wp_enqueue_scripts', 'theme_script', 'after_setup_theme');
     
     
 
