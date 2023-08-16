@@ -1,3 +1,4 @@
+<?php get_template_part('template-parts/modale-contact'); ?>
 <footer class="navfooter">
     <div class="navfooter__menu">
         <?php
@@ -10,8 +11,6 @@
         <p>TOUT DROITS RÉSERVÉS</p>
     </div>
 </footer>
-
-<?php get_template_part('template-parts/modale-contact'); ?>
 
 <?php wp_footer(); ?>
 

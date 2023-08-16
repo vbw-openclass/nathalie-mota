@@ -1,14 +1,24 @@
 // On attend que le contenu du DOM soit complètement chargé
 document.addEventListener('DOMContentLoaded', (event) => {
 
-    const modal = document.getElementById('contactModal');
+    const modal = document.getElementById('contact-modal');
     const btns = document.getElementsByClassName('contact-link');
+    const referencePhotoField = document.getElementById('reference'); // Champ de formulaire de référence
 
     // On ajoute un écouteur de clic à chaque bouton 'contact-link'
     for(let i = 0; i < btns.length; i++) {
         btns[i].addEventListener("click", function(event){
             // On empêche le comportement par défaut du clic (qui serait de suivre le lien)
             event.preventDefault();
+
+            if (referencePhotoField) {
+                const referenceValue = this.dataset.reference;
+                if (referenceValue) {
+                    referencePhotoField.value = referenceValue;
+                }
+            } else {
+                console.error("L'élément avec l'ID 'reference' n'a pas été trouvé.");
+            }
 
             // On change le style de la modale pour qu'elle soit affichée
             modal.style.display = "block";

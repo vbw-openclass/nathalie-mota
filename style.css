@@ -12,20 +12,17 @@ Text Domain: nathalie-mota
 /* Apparence du header & du footer */
 .navheader {
   height: 80px;
-  width: 100%;
+  width: 80vw;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  margin-left: 10%;
 }
 .navheader__logo {
-  margin-left: 120px;
   margin-right: auto;
 }
 .navheader .menu-principal {
   list-style: none;
   display: flex;
-  margin-right: 120px;
-  margin-left: 0;
   gap: 45px;
 }
 .navheader .menu-principal li a {
@@ -87,7 +84,7 @@ Text Domain: nathalie-mota
 }
 
 /* Styles pour le formulaire */
-.formulaireContact {
+.formulaire-contact {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -95,20 +92,20 @@ Text Domain: nathalie-mota
   justify-content: center;
   width: 100%;
 }
-.formulaireContact label {
+.formulaire-contact label {
   font-family: "poppins", sans-serif;
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 5px;
 }
-.formulaireContact input {
+.formulaire-contact input {
   height: 40px;
   width: 263px;
   border-radius: 8px;
   border: solid #B8BBC2 1px;
   margin-top: 0px;
 }
-.formulaireContact input[type=submit] {
+.formulaire-contact input[type=submit] {
   height: 50px;
   width: 270px;
   border-radius: 2px;
@@ -121,10 +118,10 @@ Text Domain: nathalie-mota
   margin-bottom: 0px;
   font-size: 14px;
 }
-.formulaireContact input[type=submit]:hover {
+.formulaire-contact input[type=submit]:hover {
   background-color: #cacaca;
 }
-.formulaireContact textarea {
+.formulaire-contact textarea {
   height: 142px;
   width: 263px;
   border-radius: 8px;
@@ -156,6 +153,133 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+}
+
+/* Apparence des postes seuls */
+.container-principal {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  margin-left: 10%;
+  /* Partie navigation et contact */
+  /* Partie photos apparentées */
+}
+.container-principal__single {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 40px;
+  height: 95vh;
+}
+.container-principal__single img {
+  width: 45%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: auto;
+}
+.container-principal__single .details-photo {
+  width: 53%;
+  border-bottom: solid black 1px;
+  padding-bottom: 40px;
+}
+.container-principal__single .details-photo h2 {
+  font-family: "space-mono-regular", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 65px;
+  line-height: 60px;
+  text-transform: uppercase;
+  width: 420px;
+}
+.container-principal__single .details-photo p {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.container-principal .container-contact {
+  border-bottom: solid black 1px;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+}
+.container-principal .container-contact__contact-btn {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.container-principal .container-contact__contact-btn p {
+  margin-right: 100px;
+}
+.container-principal .container-contact__contact-btn button {
+  width: 270px;
+  height: 50px;
+  border: none;
+  background-color: #d8d8d8;
+}
+.container-principal .container-contact__contact-btn button:hover {
+  background-color: #c9c9c9;
+}
+.container-principal .container-contact__navigation-arrows {
+  margin-left: auto;
+}
+.container-principal .container-contact__navigation-arrows .container-miniature {
+  width: 80px;
+  height: 70px;
+  background-color: #d8d8d8;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.container-principal .container-contact__navigation-arrows .container-miniature__img-arrows {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container-principal .container-contact__navigation-arrows .container-arrows {
+  display: flex;
+  justify-content: space-between;
+}
+.container-principal .container-photo-block {
+  display: flex;
+  flex-direction: column;
+}
+.container-principal .container-photo-block__title {
+  margin: -20px 0px 60px;
+  text-transform: uppercase;
+}
+.container-principal .container-photo-block__apparente {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  justify-content: space-between;
+}
+.container-principal .container-photo-block__apparente .img-apparente {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 37vw;
+  height: 73vh;
+  overflow: hidden;
+  margin-bottom: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container-principal .container-photo-block__apparente img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 73vh;
+}
+.container-principal .container-photo-block__all-btn {
+  width: 270px;
+  height: 50px;
+  border: none;
+  background-color: #d8d8d8;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.container-principal .container-photo-block__all-btn:hover {
+  background-color: #c9c9c9;
 }
 
 /* Apparence de la police */
