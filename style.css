@@ -153,6 +153,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  height: 100%;
 }
 
 /* Apparence des postes seuls */
@@ -280,6 +281,35 @@ body {
 }
 .container-principal .container-photo-block__all-btn:hover {
   background-color: #c9c9c9;
+}
+
+/* Apparence de front-page */
+.container-hero {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-hero__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  position: relative;
+}
+.container-hero__titre {
+  z-index: 2;
+  position: absolute;
+  font-weight: 700;
+  font-family: "spaceMono-Bold", sans-serif;
+  font-style: italic;
+  font-size: 96px;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px white;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Apparence de la police */

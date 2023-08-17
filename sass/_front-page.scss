@@ -1,0 +1,30 @@
+.container-hero {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    &__img {
+        object-fit: cover;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        position: relative;
+
+    }
+
+    &__titre {
+        z-index: 2;
+        position: absolute;
+        font-weight: 700;
+        font-family: "spaceMono-Bold", sans-serif;
+        font-style: italic;
+        font-size: 96px;
+        text-transform: uppercase;
+        -webkit-text-stroke: 2px white;
+        -webkit-text-fill-color: transparent;
+    }
+}
