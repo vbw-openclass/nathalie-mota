@@ -1,0 +1,30 @@
+.container-photo {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+}
+
+.container-photo-apparente {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .img-apparente {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(50% - 18.5px);
+        height: 73vh;
+        overflow: hidden;
+        margin-bottom: 50px;
+        object-fit: cover;
+
+    }
+
+    img {
+        object-fit: cover;
+        height: 73vh;
+    }
+}

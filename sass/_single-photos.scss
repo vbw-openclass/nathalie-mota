@@ -98,38 +98,6 @@
 
     /* Partie photos apparentées */
 
-    .container-photo-block {
-        display: flex;
-        flex-direction: column;
-
-        &__title {
-            margin: -20px 0px 60px;
-            text-transform: uppercase;
-        }
-
-        &__apparente {
-            display: flex;
-            align-items: center;
-            text-transform: uppercase;
-            justify-content: space-between;
-
-            .img-apparente {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 37vw;
-                height: 73vh;
-                overflow: hidden;
-                margin-bottom: 50px;
-                object-fit: cover;
-            }
-
-            img {
-                object-fit: cover;
-                height: 73vh;
-            }
-        }
-
         &__all-btn {
             width: 270px;
             height: 50px;
@@ -142,7 +110,7 @@
         &__all-btn:hover {
             background-color: #c9c9c9;
         }
-    }
 }
+
 
 

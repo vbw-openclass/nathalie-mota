@@ -9,6 +9,15 @@ Version: 1.0
 Tags: Nathalie Mota, Photographie, Évènement...
 Text Domain: nathalie-mota
 */
+/* Apparence de la mise en page */
+body {
+  font-family: "space-mono-regular", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* Apparence du header & du footer */
 .navheader {
   height: 80px;
@@ -147,13 +156,34 @@ Text Domain: nathalie-mota
   margin-bottom: -20px;
 }
 
-/* Apparence de la mise en page */
-body {
-  font-family: "space-mono-regular", sans-serif;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
+.container-photo {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+}
+
+.container-photo-apparente {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.container-photo-apparente .img-apparente {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(50% - 18.5px);
+  height: 73vh;
+  overflow: hidden;
+  margin-bottom: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container-photo-apparente img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 73vh;
 }
 
 /* Apparence des postes seuls */
@@ -241,37 +271,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.container-principal .container-photo-block {
-  display: flex;
-  flex-direction: column;
-}
-.container-principal .container-photo-block__title {
-  margin: -20px 0px 60px;
-  text-transform: uppercase;
-}
-.container-principal .container-photo-block__apparente {
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
-  justify-content: space-between;
-}
-.container-principal .container-photo-block__apparente .img-apparente {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 37vw;
-  height: 73vh;
-  overflow: hidden;
-  margin-bottom: 50px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.container-principal .container-photo-block__apparente img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 73vh;
-}
-.container-principal .container-photo-block__all-btn {
+.container-principal__all-btn {
   width: 270px;
   height: 50px;
   border: none;
@@ -279,7 +279,7 @@ body {
   margin: 0 auto;
   margin-bottom: 50px;
 }
-.container-principal .container-photo-block__all-btn:hover {
+.container-principal__all-btn:hover {
   background-color: #c9c9c9;
 }
 
