@@ -2,7 +2,27 @@
     display: flex;
     flex-direction: column;
     width: 80vw;
+
+    &__title {
+        margin: -20px 0px 60px;
+        text-transform: uppercase;
+    }
+
+    &__all-btn {
+        width: 270px;
+        height: 50px;
+        border: none;
+        background-color: #d8d8d8;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
+    &__all-btn:hover {
+        background-color: #c9c9c9;
+    }
+
 }
+
 
 .container-photo-apparente {
     display: flex;

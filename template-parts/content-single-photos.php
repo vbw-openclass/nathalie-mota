@@ -109,7 +109,7 @@
     </div>
 
     <div class="container-photo">
-        <p class="container-photo-block__title"> vous aimerez aussi </p>
+        <p class="container-photo__title"> vous aimerez aussi </p>
         <div class="container-photo-apparente">
             <?php
                 $categories = get_the_terms(get_the_ID(), 'categorie');
@@ -148,6 +148,6 @@
             ?>
         </div>
 
-        <button type="button" class="container-photo-block__all-btn">Toutes les photos</button>
+        <button type="button" class="container-photo__all-btn">Toutes les photos</button>
     </div>
 </div>

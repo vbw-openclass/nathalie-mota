@@ -52,7 +52,7 @@
         </div>
 
         <div id="load-more-container">
-            <button id="load-more-btn" class="btn">Charger plus</button>
+            <button id="load-more-btn" class="container-photo__all-btn">Charger plus</button>
         </div>
 
     </section>
