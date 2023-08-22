@@ -199,6 +199,7 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   height: 73vh;
+  width: 100%;
 }
 
 /* Apparence des postes seuls */
@@ -313,6 +314,10 @@ body {
   text-transform: uppercase;
   -webkit-text-stroke: 2px white;
   -webkit-text-fill-color: transparent;
+}
+
+.testo {
+  margin-left: 10%;
 }
 
 /* Apparence de la police */

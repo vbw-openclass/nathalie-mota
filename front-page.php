@@ -23,7 +23,7 @@
             <h2 class="container-hero__titre"> Photographe Event </h2>
     </section>
 
-    <section class="container-photo">
+    <section class="container-photo testo">
         <!-- Catalogue -->
         <div class="container-photo-apparente" data-page="1">
             <?php
@@ -33,8 +33,8 @@
             $args_photos = array(
                 'post_type' => 'photos',
                 'posts_per_page' => 12,
-                'orderby' => 'rand',
-                'paged' => $pagin,
+                'orderby' => 'date',
+                'order' => 'ASC', 
             );
 
             $catalogue_photos = new WP_Query($args_photos);
