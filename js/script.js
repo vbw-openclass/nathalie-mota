@@ -50,5 +50,59 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }, false );
 });
 
+var pageNum = 2;  
+
+// Cette requête AJAX sert à charger les catégories depuis un endpoint API.
+jQuery(document).ready(function($) {
+    // Charger les catégories
+    $.ajax({
+        url: 'http://localhost/nathalie-mota/wp-json/wp/v2/categorie',
+        method: 'GET',
+        success: function(data) {// Fonction à exécuter si la requête est un succès.
+            // Pour chaque objet "categorie" dans les données retournées,
+            // on ajoute une nouvelle option au menu déroulant "filtre-categorie".
+            data.forEach(function(categorie) {
+                $('#filtre-categorie').append('<option value="' + categorie.id + '">' + categorie.name + '</option>');
+            });
+        }
+    });
+
+    // Charger les formats
+    $.ajax({
+        url: 'http://localhost/nathalie-mota/wp-json/wp/v2/format',
+        method: 'GET',
+        success: function(data) {
+            data.forEach(function(format) {
+                $('#filtre-format').append('<option value="' + format.id + '">' + format.name + '</option>');
+            });
+        }
+    });
+
+    // Événement de changement pour les filtres
+    $('#filtre-categorie, #filtre-format, #filtre-date').change(function() {
+        pageNum = 2;  // Réinitialisez le numéro de la page seulement si un filtre est appliqué
+        var categorie = $('#filtre-categorie').val();
+        var format = $('#filtre-format').val();
+        var annee = $('#filtre-date').val();
+
+
+
+        $.ajax({
+            url: my_ajax_object.ajax_url,
+            method: 'POST',
+            data: {
+                action: 'load_more_photos',
+                categorie: categorie,
+                format: format,
+                annee: annee
+            },
+            success: function(data) {
+                // Mettre à jour le catalogue de photos
+                $('.container-photo-apparente').html(data);
+            }
+        });
+    });
+});
+
 
 

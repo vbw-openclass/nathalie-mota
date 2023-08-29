@@ -2,7 +2,8 @@
 
 <body>
     <main>
-        
+    
+    <!-- hero -->
     <section class="container-hero">
         <?php
             $args = array(
@@ -23,8 +24,25 @@
             <h2 class="container-hero__titre"> Photographe Event </h2>
     </section>
 
+    <!-- filtre -->
+    <section>
+        <select id="filtre-categorie">
+            <option value="">Sélectionnez une catégorie</option>
+        </select>
+
+        <select id="filtre-format">
+            <option value="">Sélectionnez un format</option>
+        </select>
+
+        <select id="filtre-date">
+            <option value="">Trier par date</option>
+            <option value="ASC">Du plus ancien au plus récent</option>
+            <option value="DESC">Du plus récent au plus ancien</option>
+        </select>
+    </section>
+
+    <!-- Catalogue -->
     <section class="container-photo testo">
-        <!-- Catalogue -->
         <div class="container-photo-apparente" data-page="1">
             <?php
 
@@ -54,7 +72,6 @@
         <div id="load-more-container">
             <button id="load-more-btn" class="container-photo__all-btn">Charger plus</button>
         </div>
-
     </section>
 
     </main>
