@@ -1,7 +1,5 @@
 jQuery(document).ready(function($) {
 
-    var maxPages = 100;
-
     // Cette fonction retourne les valeurs actuelles des filtres.
     function getCurrentFilters() {
         return {
@@ -27,11 +25,12 @@ jQuery(document).ready(function($) {
                 annee: currentFilters.annee
             },
             success: function(response) {
-                $('.container-photo-apparente').append(response);
-                pageNum++;
-
-                if (pageNum > maxPages) {
-                    $('#load-more-container').hide();
+                if (response.trim() === '') {  // vérifier si la réponse est vide
+                    // Ajoutez un message pour informer qu'il n'y a plus de données à charger
+                    $('.container-photo-apparente').append('<p>Pas de photos supplémentaires à charger.</p>');
+                } else {
+                    $('.container-photo-apparente').append(response); // ajouter les nouvelles données
+                    pageNum++;
                 }
             },
             error: function() {

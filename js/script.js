@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }, false );
 });
 
+
 var pageNum = 2;  
 
 // Cette requête AJAX sert à charger les catégories depuis un endpoint API.
