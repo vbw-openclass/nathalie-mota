@@ -4,7 +4,7 @@
     width: 80vw;
 
     &__title {
-        margin: -20px 0px 60px;
+        margin: -20px 0px 30px;
         text-transform: uppercase;
     }
 
@@ -15,6 +15,7 @@
         background-color: #d8d8d8;
         margin: 0 auto;
         margin-bottom: 50px;
+        cursor: pointer;
     }
 
     &__all-btn:hover {
@@ -35,17 +36,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: calc(50% - 18.5px);
-        height: 73vh;
+        width: calc(40vw - 18.5px);
+        height: 39vw;
+        aspect-ratio: 1/1;
         overflow: hidden;
-        margin-bottom: 50px;
+        margin-bottom: 44px;
         object-fit: cover;
 
     }
 
     img {
         object-fit: cover;
-        height: 73vh;
+        height: 81vh;
         width: 100%;
     }
 }

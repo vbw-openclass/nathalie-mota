@@ -9,18 +9,10 @@
         justify-content: space-between;
         align-items: flex-end;
         margin-top: 40px;
-        height: 70vh;
-
-
-        img {
-            width: auto;
-            height: 100%;
-            object-fit: contain;
-            margin-left: auto;
-        }
+        max-height: 68vh;
 
         .details-photo {
-            width: 50vw;
+            width: 50%;
             border-bottom: solid black 1px;
             padding-bottom: 40px;
 
@@ -39,6 +31,46 @@
                 text-transform: uppercase;
 
             }
+        }
+    }
+
+    .img-container {
+        position: relative;
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+
+        .img-with-overlay {
+            position: relative;
+            display: flex;
+        }
+    
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            max-height: 70vh;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            display: none;
+            z-index: 10;  /* Pour s'assurer qu'il apparaît au-dessus de l'image */
+        }
+
+        &:hover .overlay {
+            display: block;
+        }
+    
+        img.fullscreen-icon {
+            width: 35px;
+            height: 35px;
         }
     }
 
@@ -74,14 +106,48 @@
 
         &__navigation-arrows {
             margin-left: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 29px;
+            margin-top: 75px;
+            
 
-            .container-miniature {
+        
+            .arrow-block {
+                position: relative;
+        
+                &:hover .container-miniature {
+                    display: block;
+                }
+            }
+
+            .container-miniature--previous {
                 width: 80px;
                 height: 70px;
                 background-color: #d8d8d8;
                 overflow: hidden;
-                margin-top: 10px;
-
+                display: none;
+                position: absolute;
+                bottom: 30px;
+                left: 1px;
+        
+                &__img-arrows {
+                    max-width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+        
+            .container-miniature--next {
+                width: 80px;
+                height: 70px;
+                background-color: #d8d8d8;
+                overflow: hidden;
+                display: none;
+                position: absolute;
+                bottom: 30px;
+                right: 0;
+        
                 &__img-arrows {
                     max-width: 100%;
                     height: auto;
@@ -89,10 +155,6 @@
                 }
             }
 
-            .container-arrows {
-                display: flex;
-                justify-content: space-between;
-            }
         }
     }
 

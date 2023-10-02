@@ -25,17 +25,17 @@
     </section>
 
     <!-- filtre -->
-    <section>
-        <select id="filtre-categorie">
-            <option value="">Sélectionnez une catégorie</option>
+    <section class="filter-container">
+        <select id="filtre-categorie" class="custom-select2-behavior" data-placeholder="CATÉGORIES">
+            <option value="">CATÉGORIES</option>
         </select>
 
-        <select id="filtre-format">
-            <option value="">Sélectionnez un format</option>
+        <select id="filtre-format" class="custom-select2-behavior" data-placeholder="FORMATS">
+            <option value="">FORMATS</option>
         </select>
 
-        <select id="filtre-date">
-            <option value="">Trier par date</option>
+        <select id="filtre-date" class="custom-select2-behavior" data-placeholder="TRIER PAR">
+            <option value="">TRIER PAR</option>
             <option value="ASC">Du plus ancien au plus récent</option>
             <option value="DESC">Du plus récent au plus ancien</option>
         </select>

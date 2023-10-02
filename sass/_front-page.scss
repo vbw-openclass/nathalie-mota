@@ -29,6 +29,108 @@
     }
 }
 
+#load-more-container {
+    display: flex;
+    align-items: center;
+}
+
+.filter-container {
+    display: flex;        
+    align-items: center;
+    margin-left: 10%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    width: 80vw;
+    gap: 30px;
+}
+
+#filtre-date {
+    margin-left: auto;     
+    position: relative !important;
+}
+
+.select2-container {
+    width: 15vw !important;
+}
+
+/* Personnalisation de l'apparence de base du sélecteur Select2 */
+.select2-container .select2-selection--single {
+    border-radius: 8px !important; /* Coins arrondis */
+    border: 1px solid #B8BBC2 !important; /* Bordure */
+    height: 40px !important; /* Hauteur du sélecteur */
+}
+
+.select2-container--open .select2-selection--single {
+    border-radius: 8px 8px 0 0 !important;
+    border-color: #215AFF !important;
+}
+
+.select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: #E00000 !important;
+}
+
+
+.select2-results__option--selected {
+    background-color: white !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 45px !important;
+}
+
+.select2-container .select2-selection--single .select2-selection__arrow b {
+    width: 7px !important;
+    height: 7px !important;
+    top: 50% !important;
+    right: 20px !important;
+    margin: -10px 0 0 -10px !important;
+    border-left: none !important;
+    border-top: none !important;
+    border-right: 1px black solid;
+    border-bottom: 1px black solid;
+    border-color: black !important;
+    border-width: 1px !important;
+    -webkit-transform: rotate(45deg);
+}
+
+.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    width: 7px !important;
+    height: 7px !important;
+    top: 60% !important;
+    right: 20px !important;
+    margin: -10px 0 0 -10px !important;
+    border-left: none !important;
+    border-top: none !important;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-color: black !important;
+    border-width: 1px !important;
+    -webkit-transform: rotate(-135deg); /* Cela fait pivoter la flèche pour qu'elle pointe vers le haut */
+}
+
+/* Personnalisation de l'apparence du texte sélectionné */
+.select2-container .select2-selection--single .select2-selection__rendered {
+    line-height: 38px !important; /* Centrage vertical du texte */
+    color: #333 !important; /* Couleur du texte */
+}
+
+/* Personnalisation de l'apparence du menu déroulant */
+.select2-dropdown {
+    border-radius: 0 0 8px 8px !important; /* Coins arrondis du menu déroulant */
+    top: 32px !important;
+}
+
+.select2-search__field {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #333 !important;  // Choisissez la couleur que vous préférez ici
+}
+
+
 .testo {
     margin-left: 10%;
 }

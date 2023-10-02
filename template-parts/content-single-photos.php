@@ -38,7 +38,14 @@
                 ?>
             </div>
         </div>
-        <img src="<?php echo esc_url($photo_retrieval); ?>" alt="<?php echo esc_attr(get_the_title()); ?>"><br>
+        <div class="img-container">
+            <div class="img-with-overlay">
+                <img src="<?php echo esc_url($photo_retrieval); ?>" alt="<?php echo esc_attr(get_the_title()); ?>"><br>
+                <div class="overlay">
+                    <img src="<?php echo get_theme_file_uri() .'/assets/images/fullscreen.png';?>" class="fullscreen-icon" alt="Voir en plein écran">
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="container-contact">
@@ -81,29 +88,41 @@
 
         <div class="container-contact__navigation-arrows">
             <?php if (!empty($previous_post) || !empty($next_post)) { ?>
-                <div class="container-miniature">
-                    <?php
-                        $thumbnail_ID = null;
-
-                        if (!empty($next_post)) {
-                            $thumbnail_ID = get_post_thumbnail_id($next_post->ID);
-                        } elseif (!empty($previous_post)) {
-                            $thumbnail_ID = get_post_thumbnail_id($previous_post->ID);
-                        }
-
-                        if ($thumbnail_ID) {
-                            echo wp_get_attachment_image($thumbnail_ID, 'thumbnail', false, ['class' => 'container-miniature__img-arrows']);
-                        }
-                    ?>
-                </div>
-                <div class="container-arrows">
+                
+                <!-- Bloc pour la photo précédente -->
+                <div class="arrow-block arrow-block--previous">
+                    <div class="container-miniature container-miniature--previous">
+                        <?php
+                            if (!empty($previous_post)) {
+                                $thumbnail_ID_prev = get_post_thumbnail_id($previous_post->ID);
+                                if ($thumbnail_ID_prev) {
+                                    echo wp_get_attachment_image($thumbnail_ID_prev, 'thumbnail', false, ['class' => 'container-miniature__img-arrows']);
+                                }
+                            }
+                        ?>
+                    </div>
                     <?php if (!empty($previous_post)) { ?>
                         <a href="<?php echo get_permalink($previous_post->ID) ?>"><img class="arrow-left" src="<?php echo get_theme_file_uri() .'/assets/images/arrow-left.png';?>" alt="Flèche précédent"></a>
                     <?php } ?>
+                </div>
+
+                <!-- Bloc pour la photo suivante -->
+                <div class="arrow-block arrow-block--next">
+                    <div class="container-miniature container-miniature--next">
+                        <?php
+                            if (!empty($next_post)) {
+                                $thumbnail_ID_next = get_post_thumbnail_id($next_post->ID);
+                                if ($thumbnail_ID_next) {
+                                    echo wp_get_attachment_image($thumbnail_ID_next, 'thumbnail', false, ['class' => 'container-miniature__img-arrows']);
+                                }
+                            }
+                        ?>
+                    </div>
                     <?php if (!empty($next_post)) { ?>
                         <a href="<?php echo get_permalink($next_post->ID) ?>"><img class="arrow-right" src="<?php echo get_theme_file_uri() .'/assets/images/arrow-right.png';?>" alt="Flèche suivant"></a>
                     <?php } ?>
                 </div>
+                
             <?php } ?>
         </div>
     </div>
