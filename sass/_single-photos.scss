@@ -11,7 +11,7 @@
         margin-top: 40px;
         max-height: 68vh;
 
-        .details-photo {
+        &__details-photo {
             width: 50%;
             border-bottom: solid black 1px;
             padding-bottom: 40px;
@@ -34,13 +34,13 @@
         }
     }
 
-    .img-container {
+    .img-single {
         position: relative;
         width: 50%;
         display: flex;
         justify-content: flex-end;
 
-        .img-with-overlay {
+        &__overlay {
             position: relative;
             display: flex;
         }
@@ -53,7 +53,7 @@
             max-height: 70vh;
         }
 
-        .overlay {
+        .overlay-single {
             position: absolute;
             top: 10px;
             right: 10px;
@@ -61,10 +61,10 @@
             height: 35px;
             cursor: pointer;
             display: none;
-            z-index: 10;  /* Pour s'assurer qu'il apparaît au-dessus de l'image */
+            z-index: 10;  
         }
 
-        &:hover .overlay {
+        &:hover .overlay-single {
             display: block;
         }
     
@@ -87,9 +87,10 @@
             align-items: center;
             margin-bottom: 30px;
             margin-top: 30px;
+            font-family: 'poppins' , sans-serif;
 
             p {
-                margin-right: 100px;
+                margin-right: 110px;
             }
 
             button {
@@ -97,6 +98,7 @@
                 height: 50px;
                 border: none;
                 background-color: #d8d8d8;
+                font-family: 'space-mono-regular', sans-serif;
             }
 
             button:hover {
@@ -111,8 +113,6 @@
             gap: 29px;
             margin-top: 75px;
             
-
-        
             .arrow-block {
                 position: relative;
         
@@ -121,7 +121,7 @@
                 }
             }
 
-            .container-miniature--previous {
+            .container-miniature-previous {
                 width: 80px;
                 height: 70px;
                 background-color: #d8d8d8;
@@ -138,7 +138,7 @@
                 }
             }
         
-            .container-miniature--next {
+            .container-miniature-next {
                 width: 80px;
                 height: 70px;
                 background-color: #d8d8d8;
@@ -154,8 +154,6 @@
                     object-fit: cover;
                 }
             }
-
         }
     }
-
 }

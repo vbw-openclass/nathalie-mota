@@ -12,10 +12,12 @@
 
 <header class="navheader">
     <div class="navheader__logo">
-        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/logo-mota.png" alt="Logo du site">
+        <a href="<?php echo home_url(); ?>">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/logo-mota.png" alt="Logo du site">
+        </a>
     </div>
 
-    <nav class="navigation">
+    <nav>
         <?php
             wp_nav_menu(array(
                 'theme_location' => 'header', 

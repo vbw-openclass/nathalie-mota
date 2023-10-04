@@ -48,6 +48,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }, false );
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('redirection-catalogue');
+    
+    if (btn) {
+        btn.addEventListener('click', function() {
+            window.location.href = 'http://localhost/nathalie-mota/#section-catalogue';
+        });
+    }
+});
+
 // Initialisation du numéro de la page pour la pagination
 var pageNum = 2;  
 
@@ -120,3 +130,4 @@ jQuery(document).ready(function($) {
         }
     });
 });
+

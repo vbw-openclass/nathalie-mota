@@ -12,7 +12,7 @@
 
 <div class="container-principal">
     <div class="container-principal__single">
-        <div class="details-photo">
+        <div class="container-principal__single__details-photo">
             <h2><?php echo esc_html(get_the_title()); ?></h2>
             <div>
                 <?php 
@@ -38,10 +38,10 @@
                 ?>
             </div>
         </div>
-        <div class="img-container">
-            <div class="img-with-overlay">
+        <div class="img-single">
+            <div class="img-single__overlay">
                 <img src="<?php echo esc_url($photo_retrieval); ?>" alt="<?php echo esc_attr(get_the_title()); ?>"><br>
-                <div class="overlay">
+                <div class="overlay-single">
                     <img src="<?php echo get_theme_file_uri() .'/assets/images/fullscreen.png';?>" class="fullscreen-icon" alt="Voir en plein écran">
                 </div>
             </div>
@@ -90,8 +90,8 @@
             <?php if (!empty($previous_post) || !empty($next_post)) { ?>
                 
                 <!-- Bloc pour la photo précédente -->
-                <div class="arrow-block arrow-block--previous">
-                    <div class="container-miniature container-miniature--previous">
+                <div class="arrow-block">
+                    <div class="container-miniature container-miniature-previous">
                         <?php
                             if (!empty($previous_post)) {
                                 $thumbnail_ID_prev = get_post_thumbnail_id($previous_post->ID);
@@ -107,8 +107,8 @@
                 </div>
 
                 <!-- Bloc pour la photo suivante -->
-                <div class="arrow-block arrow-block--next">
-                    <div class="container-miniature container-miniature--next">
+                <div class="arrow-block">
+                    <div class="container-miniature container-miniature-next">
                         <?php
                             if (!empty($next_post)) {
                                 $thumbnail_ID_next = get_post_thumbnail_id($next_post->ID);
@@ -167,6 +167,6 @@
             ?>
         </div>
 
-        <button type="button" class="container-photo__all-btn">Toutes les photos</button>
+        <button type="button" id="redirection-catalogue" class="container-photo__all-btn">Toutes les photos</button>
     </div>
 </div>

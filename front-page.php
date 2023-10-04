@@ -24,25 +24,25 @@
             <h2 class="container-hero__titre"> Photographe Event </h2>
     </section>
 
-    <!-- filtre -->
-    <section class="filter-container">
-        <select id="filtre-categorie" class="custom-select2-behavior" data-placeholder="CATÉGORIES">
-            <option value="">CATÉGORIES</option>
-        </select>
-
-        <select id="filtre-format" class="custom-select2-behavior" data-placeholder="FORMATS">
-            <option value="">FORMATS</option>
-        </select>
-
-        <select id="filtre-date" class="custom-select2-behavior" data-placeholder="TRIER PAR">
-            <option value="">TRIER PAR</option>
-            <option value="ASC">Du plus ancien au plus récent</option>
-            <option value="DESC">Du plus récent au plus ancien</option>
-        </select>
-    </section>
-
     <!-- Catalogue -->
-    <section class="container-photo testo">
+    <section id="section-catalogue" class="container-photo align-left">
+        <!-- filtre -->
+        <section class="filtre-container">
+            <select id="filtre-categorie" class="custom-select2-behavior" data-placeholder="CATÉGORIES">
+                <option value="">CATÉGORIES</option>
+            </select>
+
+            <select id="filtre-format" class="custom-select2-behavior" data-placeholder="FORMATS">
+                <option value="">FORMATS</option>
+            </select>
+
+            <select id="filtre-date" class="custom-select2-behavior" data-placeholder="TRIER PAR">
+                <option value="">TRIER PAR</option>
+                <option value="ASC">Des plus anciennes aux plus récentes</option>
+                <option value="DESC">Des plus récentes aux plus anciennes</option>
+            </select>
+        </section>
+        
         <div class="container-photo-apparente" data-page="1">
             <?php
 

@@ -34,13 +34,12 @@
     align-items: center;
 }
 
-.filter-container {
+.filtre-container {
+    font-family: 'poppins' , sans-serif;
     display: flex;        
     align-items: center;
-    margin-left: 10%;
     margin-top: 50px;
     margin-bottom: 30px;
-    width: 80vw;
     gap: 30px;
 }
 
@@ -53,11 +52,16 @@
     width: 15vw !important;
 }
 
+.select2-container--default .select2-results>.select2-results__options {
+    font-family: 'poppins' , sans-serif;
+    color: #313144;
+}
+
 /* Personnalisation de l'apparence de base du sélecteur Select2 */
 .select2-container .select2-selection--single {
-    border-radius: 8px !important; /* Coins arrondis */
-    border: 1px solid #B8BBC2 !important; /* Bordure */
-    height: 40px !important; /* Hauteur du sélecteur */
+    border-radius: 8px !important; 
+    border: 1px solid #B8BBC2 !important; 
+    height: 40px !important; 
 }
 
 .select2-container--open .select2-selection--single {
@@ -105,18 +109,18 @@
     border-bottom: 1px solid black;
     border-color: black !important;
     border-width: 1px !important;
-    -webkit-transform: rotate(-135deg); /* Cela fait pivoter la flèche pour qu'elle pointe vers le haut */
+    -webkit-transform: rotate(-135deg); 
 }
 
 /* Personnalisation de l'apparence du texte sélectionné */
 .select2-container .select2-selection--single .select2-selection__rendered {
-    line-height: 38px !important; /* Centrage vertical du texte */
-    color: #333 !important; /* Couleur du texte */
+    line-height: 38px !important; 
+    color: #333 !important; 
 }
 
 /* Personnalisation de l'apparence du menu déroulant */
 .select2-dropdown {
-    border-radius: 0 0 8px 8px !important; /* Coins arrondis du menu déroulant */
+    border-radius: 0 0 8px 8px !important; 
     top: 32px !important;
 }
 
@@ -127,10 +131,10 @@
 }
 
 .select2-container--default .select2-selection--single .select2-selection__placeholder {
-    color: #333 !important;  // Choisissez la couleur que vous préférez ici
+    color: #313144 !important;  
 }
 
 
-.testo {
+.align-left {
     margin-left: 10%;
 }
