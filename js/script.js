@@ -131,3 +131,9 @@ jQuery(document).ready(function($) {
     });
 });
 
+jQuery(document).ready(function($) {
+    $('.burgerBtn').on('click', function() {
+        $(this).toggleClass('open'); // Change l'apparence du bouton
+        $('nav').toggleClass('active'); // Affiche ou cache le menu
+    });
+});

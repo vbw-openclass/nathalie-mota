@@ -8,25 +8,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 10;
 
     img {
-        max-width: 90%;
-        max-height: 90%;
+        max-width: 80vw;
+        max-height: 80vh;
     }
 
     &__nav-button {
         position: absolute;
-        width: 130px;
-        height: 30px;
+        width: 8vw;
+        height: 3vh;
         cursor: pointer;
     }
     
     &__prev-button {
-        left: 130px;
+        left: 2%;
     }
     
     &__next-button {
-        right: 130px;
+        right: 2%;
     }
 }
 
@@ -40,7 +41,6 @@
     position: absolute;
     color: white;
     font-size: 16px;
-    bottom: 10px;
 }
 
 .lightbox-reference {

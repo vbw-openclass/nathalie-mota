@@ -32,6 +32,27 @@ document.addEventListener('DOMContentLoaded', function() {
         lightbox.classList.add('hidden');
     });
 
+    // Fonction pour ajuster la position des éléments span en fonction de la taille et de la position de l'image
+    function adjustSpanPositions() {
+        // Obtenir la position et la taille de l'image
+        const imgRect = img.getBoundingClientRect();
+    
+        // Récupérer les éléments span
+        let referenceElement = document.querySelector('.lightbox-reference');
+        let categoryElement = document.querySelector('.lightbox-category');
+    
+        // Vérifier l'existence des éléments avant de les manipuler
+        if (referenceElement) {
+            referenceElement.style.left = `${imgRect.left}px`;
+            referenceElement.style.top = `${imgRect.bottom + 10}px`;
+        }
+    
+        if (categoryElement) {
+            categoryElement.style.right = `calc(100% - ${imgRect.right}px)`;
+            categoryElement.style.top = `${imgRect.bottom + 10}px`;
+        }
+    }
+
     // Fonction pour ouvrir la lightbox avec une image spécifique
     function openLightbox(imageSrc, reference, category) {
         // Modifier la source de l'image et rendre la lightbox visible
@@ -62,7 +83,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Mise à jour des éléments avec les nouvelles valeurs
         referenceElement.innerText = reference;
         categoryElement.innerText = category;
+
+        // Lorsque l'image est chargée, ajustez les positions
+        img.onload = adjustSpanPositions;
     }
+
+    // Écouter l'événement resize de la fenêtre
+    window.addEventListener('resize', adjustSpanPositions);
 
     // Fonction pour naviguer entre les images de la lightbox
     function navigate(direction) {
@@ -90,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleFullscreenClick(event) {
         if (event.target.classList.contains('fullscreen-icon')) {
             // Trouver l'élément image associé à l'icône cliquée
-            const imgElement = event.target.closest('.img-apparente') || event.target.closest('.img-container');
+            const imgElement = event.target.closest('.img-apparente') || event.target.closest('.img-container') || event.target.closest('.img-single');
             const imgSrc = imgElement.querySelector('img').src;
     
             // Trouver les données de l'image cliquée pour l'ouvrir dans la lightbox
@@ -109,8 +136,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Écouter les clics sur les icônes "fullscreen" pour ouvrir la lightbox
-    document.querySelector('.container-photo-apparente').addEventListener('click', handleFullscreenClick);
-    
+    document.querySelectorAll('.container-photo-apparente, .container-principal__single').forEach(function(container) {
+        container.addEventListener('click', handleFullscreenClick);
+    });
+        
     // Écouter les clics sur les icônes "fullscreen" dans img-container
     document.querySelectorAll('.img-container').forEach(function(container) {
         container.addEventListener('click', handleFullscreenClick);

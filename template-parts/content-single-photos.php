@@ -14,7 +14,7 @@
     <div class="container-principal__single">
         <div class="container-principal__single__details-photo">
             <h2><?php echo esc_html(get_the_title()); ?></h2>
-            <div>
+            <div class="container-principal__single__details-photo__description">
                 <?php 
                     if (isset($reference)) {
                         echo '<p>RÉFÉRENCE: ' . esc_html($reference) . '<br></p>';

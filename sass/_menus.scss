@@ -5,11 +5,8 @@
     width: 80vw;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-left: 10%;
-
-    &__logo {
-        margin-right: auto;
-    }
 
     .menu-principal {
         list-style: none;
